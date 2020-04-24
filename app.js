@@ -1,17 +1,19 @@
-// const person = {
-//   name: "Maximilian",
-//   age: 30,
-//   hobbies: ["Sports", "Cooking"],
-// };
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-var person = {
-    name: "Maximilian",
-    age: 30,
-    hobbies: ["Sports", "Cooking"],
-    role: Role.ADMIN
-};
+"use strict";
+function add(n1, n2) {
+    return n1 + n2;
+}
+function printResult(num) {
+    console.log("Result:" + num);
+}
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
+printResult(add(5, 2));
+var combineValues;
+combineValues = add;
+console.log(combineValues(8, 8));
+// let someValue: undefined;
+addAndHandle(10, 20, function (result) {
+    console.log(result);
+});
