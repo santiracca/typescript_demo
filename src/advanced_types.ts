@@ -37,10 +37,10 @@ const fetchedUserData = {
 };
 
 const userInput = null;
-const storedData = userInput ?? "DEFAULT";
+const storedData = userInput || "DEFAULT";
 console.log(storedData);
 
-console.log(fetchedUserData?.job.title);
+console.log(fetchedUserData.job.title);
 
 type UnknowEmployee = Employee | Admin;
 
